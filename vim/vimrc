@@ -1,0 +1,43 @@
+execute pathogen#infect()
+
+set secure exrc
+
+set enc=utf-8
+set fenc=utf-8
+set termencoding=utf-8
+
+set nocompatible
+
+set autoindent
+set smartindent
+set expandtab
+
+set tabstop=4 
+set shiftwidth=4 
+
+set foldmethod=syntax
+
+set textwidth=80
+set t_Co=256
+syntax on
+
+set number
+set showmatch
+set comments=sl:/*,mb:\ *,elx:\ */
+
+set background=dark
+
+nmap <F2> :w<CR>
+imap <F2> <ESC>:w<CR>i
+
+map <C-N> :NERDTreeToggle <CR>
+map <C-T> :tabnew <CR>
+map <C-C> :q <CR>
+
+autocmd Filetype cpp        map <F9> <ESC>:w <bar> !g++ % -o %:r -std=c++11 && ./%:r <CR>
+autocmd Filetype cpp        setlocal ts=8 sts=8 sw=8 noexpandtab
+autocmd Filetype c          setlocal ts=8 sts=8 sw=8 noexpandtab
+
+autocmd Filetype javascript map <F5> <ESC> :w <bar> :JSHint <CR> <CR>
+
+let g:airline#extensions#tabline#enabled = 1

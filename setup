@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd "$(dirname "$0")"
+
+echo "Setting up current machine ..."
+git/gitSetup
+term/terminalCase
+vim/vimSetup
+echo "Setting up done."
+
