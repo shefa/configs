@@ -2,6 +2,6 @@
 echo "Adding some aliases"
 echo "set completion-ignore-case on" | sudo tee -a ~/.bash_aliases
 echo "alias grep='grep --color'" | sudo tee -a ~/.bash_aliases
-echo "alias please='sudo $(fc -nl -1)'" | sudo tee -a ~/.bash_aliases
+echo "alias please='sudo \$(fc -nl -1)'" | sudo tee -a ~/.bash_aliases
 echo "alias dog='cat'" | sudo tee -a ~/.bash_aliases
 echo "Aliases added"
