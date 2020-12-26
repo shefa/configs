@@ -1,0 +1,6 @@
+#!/bin/sh
+#uname -snv
+echo "System $(uptime -p)" "\t\t $(uptime | sed 's/[^,]*, *//') (1, 5 and 15 minutes)"
+echo "RAM - $(free --si -h | awk 'FNR==2{print $3"/"$2",", "Free:"$4}')" "\t\t Disk - $(df -h / | awk 'FNR==2{print $3"/"$2"("$5")"}')" \
+"\t\t Public IP: $(dig +short myip.opendns.com @resolver1.opendns.com)\n"
+

@@ -1,0 +1,4 @@
+#!/bin/bash
+thought=$(curl -s --connect-timeout 5 -A '/u/DrDoctor13' 'https://www.reddit.com/r/showerthoughts/top.json?sort=top&t=week&limit=100' | python3 -c 'import sys, random, json; re=json.load(sys.stdin); print(re["data"]["children"][random.randint(0,99)]["data"]["title"])')
+echo $thought
+
