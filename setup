@@ -5,6 +5,7 @@ cd "$(dirname "$0")"
 echo "Setting up current machine ..."
 git/gitSetup
 term/terminalCase
+term/bashAliases
 vim/vimSetup
 echo "Setting up done."
 
